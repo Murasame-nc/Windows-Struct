@@ -71,3 +71,11 @@ typedef struct _LIST_ENTRY {
    struct _LIST_ENTRY *Flink;
    struct _LIST_ENTRY *Blink;
 } LIST_ENTRY, *PLIST_ENTRY, *RESTRICTED_POINTER PRLIST_ENTRY;
+typedef struct _COMPRESSION_TRANSFORM_HEADER
+{
+  ULONG ProtocolId;
+  ULONG OriginalCompressedSegmentSize;
+  USHORT CompressionAlgorithm;
+  USHORT Flags;
+  ULONG Length;
+}COMPRESSION_TRANSFORM_HEADER, *PCOMPRESSION_TRANSFORM_HEADER;
